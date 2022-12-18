@@ -1,0 +1,27 @@
+#include <iostream>
+#include <list>
+#include <iterator>
+using namespace std;
+
+int main()
+{
+    list<string> lista;
+   
+lista.push_front("ayman ,is, 63ans \n"); 
+lista.push_front("ilyas,oja , 23ans" );
+lista.push_front("fahd ,bina, 81ans");
+lista.push_front("inas,kika , 50ans" );
+lista.push_front("jamal ,loma, 10ans");
+lista.push_front("malak,wimo , 12ans " );
+cout<<"La premier liste :\n"<<endl;
+std::list<string>::iterator i;
+for (i = lista.begin(); i != lista.end(); ++i){ 
+cout <<*i<< endl;
+}
+lista.sort();                                
+cout<<" la liste triée : \n";
+for (i = lista.begin(); i != lista.end(); ++i){
+cout <<*i<< endl;
+}
+return 0;
+}
